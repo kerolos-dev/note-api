@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "fbc229a0-ceb9-465c-aa0d-3198406d9e76",
+		"name": "note is  finle",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27904663"
+	},
+	"item": [
+		{
+			"name": "user Folder",
+			"item": [
+				{
+					"name": "singUpUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"kerolos\",\r\n    \"email\":\"kerolos89@yahoo.com\",\r\n    \"password\":\"112233\",\r\n    \"rePassword\":\"112233\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/singup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"singup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\":\"kerolos89@yahoo.com\",\r\n\"password\":\"112233\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notes Folder",
+			"item": [
+				{
+					"name": "updata  notes",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1ZXJzIjoiNjVlZTE2ZTYwYjAxNjFlNGQ3ZWZjZGEzIiwidXNlciI6Imtlcm9sb3M4OUB5YWhvby5jb20iLCJpYXQiOjE3MTAxNzcwNDl9.diz2gGX3wpK1urXxXwX8Lle5BCoIAJ2xzxq-ksipuEg",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isCompleted\":\"true\",\r\n    \"id\":\"65ee1505080f366fce1f4526\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/note/65ef3012dfac8dbe9d259927",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"note",
+								"65ef3012dfac8dbe9d259927"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Note carete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\":\"65d3b4df2f4ec325f8c0c9d2\",\r\n    \"content\":\"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/note/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"note",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delet  note",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\":\"65cfc3eb6a4fd60dcfdbdf8b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/note/65cffea3f863b6525b07c4bf",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"note",
+								"65cffea3f863b6525b07c4bf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/note/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"note",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get use  note",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/note/user/65d3b4df2f4ec325f8c0c9d2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"note",
+								"user",
+								"65d3b4df2f4ec325f8c0c9d2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
